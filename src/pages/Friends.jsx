@@ -10,8 +10,6 @@ const Friends = () => {
 
     const response = data?.response;
 
-    console.log({ response })
-
     return response && Array.isArray(response) && response.length ? (
         
          <ul className='list bg-base-100 rounded-box shadow-md w-full h-[calc(100dvh-64px)]'>
@@ -24,7 +22,7 @@ const Friends = () => {
                     </div>
                 </ul>
 
-                    ) : null
+                    ) : <div>You Have No Connections Yet</div>
 }
 
 export default Friends

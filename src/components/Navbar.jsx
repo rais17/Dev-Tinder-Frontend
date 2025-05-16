@@ -13,7 +13,7 @@ const Navbar = () => {
     const dispatch = useDispatch()
 
     if (isError)
-        dispatch(showAlert({ message: error.data.message, type: "error" }));
+        dispatch(showAlert({ message: error?.data?.message || err?.error, type: "error" }));
 
     async function handleLogout() {
         try {

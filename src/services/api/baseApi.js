@@ -4,7 +4,8 @@ import { BASE_URL } from "../../utils/constant"
 export const baseApi = createApi({
     baseQuery: fetchBaseQuery({
         baseUrl: BASE_URL,
-        credentials: "include"
+        credentials: "include",
+        mode: 'cors'
     }),
     tagTypes: ["CurrentUser", "UserFeed", "ReviewRequest", "UserCoonections"],
     endpoints: () => ({})
