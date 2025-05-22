@@ -8,6 +8,7 @@ import Profile from './pages/Profile'
 import GlobalAlert from './components/GlobalAlert';
 import Request from './pages/Request';
 import Friends from './pages/Friends';
+import Chat from './pages/Chat';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/profile" element={<Profile />} />
           <Route path="/requests" element={<Request />} />
           <Route path="/friends" element={<Friends />} />
+          <Route path="/chat/:toUserId" element={<Chat />} />
         </Route>
       </Routes>
     </>

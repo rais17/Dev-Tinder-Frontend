@@ -29,7 +29,7 @@ const GlobalAlert = () => {
    }
 
   return alert ? (
-    <div role="alert" className={`alert ${alertType} alert-soft fixed top-0 right-1 z-50`}>
+    <div role="alert" className={`alert ${alertType} alert-soft fixed top-2 left-1/2 transform -translate-x-1/2 z-50`}>
       <span>{alert?.message}</span>
       </div>
   ) : null

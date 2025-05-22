@@ -1,18 +1,19 @@
 import React from 'react'
 import { useGetUsersConnectionsQuery } from '../services/api/userApi'
 import FriendsCard from '../components/FriendsCard';
+import Loader from '../components/Loader';
 
 const Friends = () => {
 
     const { data, isLoading, isError } = useGetUsersConnectionsQuery();
-    if (isLoading) return <div>Loading...</div>;
+    if (isLoading) return <Loader />;
     if (isError) return <div>Error...</div>;
 
     const response = data?.response;
 
     return response && Array.isArray(response) && response.length ? (
         
-         <ul className='list bg-base-100 rounded-box shadow-md w-full h-[calc(100dvh-64px)]'>
+        <ul className='list bg-base-100 rounded-box shadow-md w-full min-h-[calc(100dvh-64px)] pb-32'>
                     <li className="p-4 pb-2 text-lg opacity-60 tracking-wide text-center">
                         Your's Connections
                     </li>
@@ -22,7 +23,7 @@ const Friends = () => {
                     </div>
                 </ul>
 
-                    ) : <div>You Have No Connections Yet</div>
+    ) : <div className='p-4 pb-2 text-lg opacity-60 tracking-wide text-center'>You Have No Connections Yet</div>
 }
 
 export default Friends

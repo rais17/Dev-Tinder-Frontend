@@ -11,6 +11,7 @@ import { showAlert } from "../store/alertSlice";
 import MultipleInputField from "../components/MultipleInputField";
 import { useDispatch } from "react-redux";
 import UserCard from "../components/UserCard";
+import Loader from "../components/Loader";
 
 const Profile = () => {
   const { data, isLoading, isError } = useGetCurrentUserProfileQuery();
@@ -44,7 +45,7 @@ const Profile = () => {
     }
   }, [data]);
 
-  if (isLoading) return <div>Loading...</div>;
+  if (isLoading) return <Loader />;
   if (isError) return <div>Error...</div>;
 
   const handleChange = (e) => {
@@ -85,7 +86,7 @@ const Profile = () => {
   }
 
   return (
-    <div className="flex justify-center items-center h-[calc(100dvh-64px)] gap-9">
+    <div className="flex justify-center items-center min-h-[calc(100dvh-64px)] gap-9">
       <div className="card w-96 bg-base-100 card-sm shadow-sm">
         <div className="card-body gap-3">
           <h2 className="card-title text-2xl">Profile</h2>

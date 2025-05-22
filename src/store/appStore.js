@@ -2,11 +2,13 @@ import { configureStore } from "@reduxjs/toolkit";
 import alertReducer from "./alertSlice";
 import { setupListeners } from "@reduxjs/toolkit/query";
 import { baseApi } from "../services/api/baseApi";
+import chatReducer from "./chatSlice";
 
 const appStore = configureStore({
     reducer: {
         [baseApi.reducerPath]: baseApi.reducer,
-        alert: alertReducer
+        alert: alertReducer,
+        chat: chatReducer,
     },
 
     middleware: (getDefaultMiddleware) =>

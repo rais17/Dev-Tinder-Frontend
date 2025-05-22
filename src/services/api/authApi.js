@@ -8,7 +8,7 @@ export const authApi = baseApi.injectEndpoints({
                 method: "POST",
                 body: credentials
             }),
-            invalidatesTags: ["CurrentUser", "UserFeed", "ReviewRequest", "UserCoonections"],
+            invalidatesTags: ["CurrentUser", "UserFeed", "ReviewRequest", "UserCoonections", "UserChat"],
         }),
 
         logout: builder.mutation({

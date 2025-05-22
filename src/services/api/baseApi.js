@@ -7,6 +7,6 @@ export const baseApi = createApi({
         credentials: "include",
         mode: 'cors'
     }),
-    tagTypes: ["CurrentUser", "UserFeed", "ReviewRequest", "UserCoonections"],
+    tagTypes: ["CurrentUser", "UserFeed", "ReviewRequest", "UserCoonections", "UserChat"],
     endpoints: () => ({})
 })
