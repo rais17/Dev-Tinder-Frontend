@@ -12,10 +12,12 @@ export const initializeSocketConnection = () => {
             }
         });
     } else {
-        return io('/', {path: '/api/socket.io'}, {
+        return io('/', {
+            path: '/api/socket.io',
             auth: {
-                token: token
-            }
+                token: token,
+            },
+            
         });
     }
 

@@ -1,7 +1,6 @@
 import React from "react";
 
 const ChatItem = ({ sender: { firstName, lastName, photoUrl, _id }, message, currentUserId, id }) => {
-    console.log("_id",id)
     return (
         <div>
             <div className={`chat ${currentUserId === _id ? 'chat-end' : 'chat-start'} `}>
